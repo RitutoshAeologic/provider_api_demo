@@ -9,7 +9,7 @@ class NetworkClient extends BaseApiServices {
   @override
   Future getApiResponse(String url) async {
       final response = await http
-          .get(Uri.parse(url)).timeout(const Duration(seconds: 10));
+          .get(Uri.parse(url));
       print('${response.statusCode}----------&&');
       print('${response.body}---from get api call-------&&');
       print(response.body);
